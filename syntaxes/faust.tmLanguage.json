@@ -1,0 +1,61 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Faust",
+	"patterns": [
+		{
+			"name": "comment.faust",
+			"begin": "/\\*",
+			"end": "\\*/"
+		},
+		{
+			"name": "comment.faust",
+			"begin": "//",
+			"end": "$"
+		},
+		{
+			"name": "keyword.control.faust",
+			"match": "\\b(process|with|letrec|case|seq|par|sum|prod|import|component|library|environment|declare)\\b"
+		},
+		{
+			"name": "keyword.control.faust",
+			"match": "\\b(inputs|outputs|waveform|enable|control)\\b"
+		},
+		{
+			"name": "constant.language.faust",
+			"match": "\\b(mem|prefix|int|float|rdtable|rwtable|select2|select3|ffunction|fconstant|fvariable|button|checkbox|vslider|hslider|nentry|vgroup|hgroup|tgroup|vbargraph|hbargraph|soundfile|attach|acos|asin|atan|atan2|cos|sin|tan|exp|log|log10|pow|sqrt|abs|min|max|fmod|remainder|floor|ceil|rint|xor)\\b"
+		},
+		{
+			"match": "\\b((([0-9]([0-9']*[0-9])?\\.?[0-9]*([0-9']*[0-9])?)|(\\.[0-9]([0-9']*[0-9])?))((e|E)(\\+|-)?[0-9]([0-9']*[0-9])?)?)\\b",
+			"name": "constant.numeric.faust"
+		},
+		{
+			"name": "variable.faust",
+			"match": "\\b([a-zA-Z]+[a-zA-Z_]*)\\b"
+		},
+		{
+			"name": "keyword.operator.faust",
+			"match": "(<:|:>|:|,|~|=>)"
+		},
+		{
+			"name": "constant.language.faust",
+			"match": "(\\+|-|\\*|/|%|\\^|@|'|_|&|\\||==|<=|>=|!=|<<|>>|<|>|!)"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"strings": {
+			"name": "string.quoted.double.faust",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.faust",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.faust"
+}

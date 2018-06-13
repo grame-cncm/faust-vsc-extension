@@ -1,0 +1,159 @@
+{
+    "program": {
+        "prefix": "pro",
+        "scope": "faust",
+        "body": [
+          "import(\"stdfaust.lib\");",
+          "",
+          "process = ${1:expression};$0"
+        ],
+        "description": "Faust program skeleton"
+    },
+    "declare": {
+        "prefix": "dec",
+        "scope": "faust",
+        "body": [
+          "declare ${1:function} ${2:author} \"${3:myself}\";",
+          "$0"
+        ],
+        "description": "Declare a function metadata"
+    },
+    "import": {
+        "prefix": "imp",
+        "scope": "faust",
+        "body": [
+          "import(\"${1:stdfaust}.lib\");",
+          "$0"
+        ],
+        "description": "Imports a Faust library"
+    },
+    "hslider": {
+        "prefix": "hsl",
+        "scope": "faust",
+        "body": [
+          "hslider(\"${1:slider name}\", ${2:default value}, ${3:minimum value}, ${4:maximum value}, ${5:step value})$0"
+        ],
+        "description": "Horizontal slider"
+    },
+    "vslider": {
+        "prefix": "vsl",
+        "scope": "faust",
+        "body": [
+          "vslider(\"${1:slider name}\", ${2:default value}, ${3:minimum value}, ${4:maximum value}, ${5:step value})$0"
+        ],
+        "description": "Vertical slider"
+    },
+    "button": {
+        "prefix": "but",
+        "scope": "faust",
+        "body": [
+          "button(\"${1:slider name}\")$0"
+        ],
+        "description": "Button"
+    },
+    "checkbox": {
+        "prefix": "che",
+        "scope": "faust",
+        "body": [
+          "checkbox(\"${1:slider name}\")$0"
+        ],
+        "description": "Checkbox"
+    },
+    "seq": {
+        "prefix": "seq",
+        "scope": "faust",
+        "body": [
+          "seq(${1:var}, ${2:num}, ${3:expression})$0"
+        ],
+        "description": "sequential iterator"
+    },
+    "seq": {
+        "prefix": "seq",
+        "scope": "faust",
+        "body": [
+          "seq(${1:var}, ${2:num}, ${3:expression})$0"
+        ],
+        "description": "Sequential Iterator"
+    },
+    "par": {
+        "prefix": "par",
+        "scope": "faust",
+        "body": [
+          "par(${1:var}, ${2:num}, ${3:expression})$0"
+        ],
+        "description": "Parallel Iterator"
+    },
+    "sum": {
+        "prefix": "sum",
+        "scope": "faust",
+        "body": [
+          "sum(${1:var}, ${2:num}, ${3:expression})$0"
+        ],
+        "description": "Sum Iterator"
+    },
+    "prod": {
+        "prefix": "prod",
+        "scope": "faust",
+        "body": [
+          "prod(${1:var}, ${2:num}, ${3:expression})$0"
+        ],
+        "description": "Product Iterator"
+    },
+    "library": {
+        "prefix": "lib",
+        "scope": "faust",
+        "body": [
+          "library(\"${1:filename}.lib\")$0"
+        ],
+        "description": "Library Environment"
+    },
+    "component": {
+        "prefix": "com",
+        "scope": "faust",
+        "body": [
+          "component(\"${1:filename}.dsp\")$0"
+        ],
+        "description": "Faust Component"
+    },
+    "environment": {
+        "prefix": "env",
+        "scope": "faust",
+        "body": [
+          "environment { ${1:name} = ${2:definition}; }$0"
+        ],
+        "description": "Lexical environment"
+    },
+    "with": {
+        "prefix": "wit",
+        "scope": "faust",
+        "body": [
+          "with { ${1:name} = ${2:definition}; }$0"
+        ],
+        "description": "Local environment"
+    },
+    "letrec": {
+        "prefix": "let",
+        "scope": "faust",
+        "body": [
+          "letrec { '${1:name} = ${2:definition}; }$0"
+        ],
+        "description": "Difference equation environment"
+    },
+    "waveform": {
+        "prefix": "wav",
+        "scope": "faust",
+        "body": [
+          "waveform { ${1:value}, $0 }"
+        ],
+        "description": "Waveform: periodic signal"
+    },
+    "soundfile": {
+        "prefix": "sou",
+        "scope": "faust",
+        "body": [
+          "soundfile(\"${1:filename}\", ${2:channels})$0"
+        ],
+        "description": "Waveform: periodic signal"
+    }
+
+}

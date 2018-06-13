@@ -1,0 +1,30 @@
+{
+    "name": "faust",
+    "displayName": "faust",
+    "description": "faust syntax highlighting",
+    "version": "0.0.1",
+    "publisher": "grame",
+    "engines": {
+        "vscode": "^1.24.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "faust",
+            "aliases": ["Faust", "faust"],
+            "extensions": [".dsp",".lib"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "faust",
+            "scopeName": "source.faust",
+            "path": "./syntaxes/faust.tmLanguage.json"
+        }],
+		"snippets": [{
+			"language": "faust",
+			"path": "./snippets/faust.snippets.json"
+		}]
+    }
+}
